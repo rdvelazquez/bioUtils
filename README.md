@@ -10,6 +10,8 @@ __Goals:__
 - work in Node and in the browser
 - standardize input, output and formatting so that you can focus on analyzing the data
 
+#### Docs: https://rdvelazquez.github.io/bioUtils/
+
 ### Install  
 ```
 npm install bioutils
@@ -53,4 +55,4 @@ biUtils.writeFileSync(exampleBioDataAminoAcis, 'fasta', 'exampleOutputFileAA.fas
 Test `yarn test`  
 Lint `yarn lint`  
 Build Docs `yarn document`  
-Publish to NPM [TODO]  
+Publish to NPM... just `npm publish` 
