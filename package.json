@@ -1,0 +1,26 @@
+{
+  "name": "bioutils",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "src/bioUtils.js",
+  "description": "Utilities for Working with Bioinformatics Files (fasta, fna, nexus and newick) in JavaScript",
+  "author": "Ryan Velazquez <ryan.velazquez0001@temple.edu>",
+  "scripts": {
+    "lint": "eslint **/*.js",
+    "test": "./node_modules/.bin/jest --coverage",
+    "format": "prettier 'src/**/*.js' --write",
+    "precommit": "pretty-quick --staged",
+    "document": "./node_modules/.bin/documentation build src/**.js -f html -o docs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "documentation": "9.1.1",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "prettier": "1.13.3",
+    "pretty-quick": "^1.6.0"
+  },
+  "jest": {
+    "testURL": "http://localhost/"
+  }
+}
