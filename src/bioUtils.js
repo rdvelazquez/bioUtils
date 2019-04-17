@@ -14,6 +14,7 @@ const containsStopCodons = require('./getInfo/containsStopCodons')
 
 // manipulation
 const translateToAminoAcids = require('./manipulation/translateToAminoAcids')
+const getSitesAsListOfStrings = require('./manipulation/getSitesAsListOfStrings')
 
 module.exports = {
     'inputData': inputData,
@@ -24,5 +25,6 @@ module.exports = {
     'fnaParser': fnaParser,
     'newickParser': newickParser,
     'containsStopCodons': containsStopCodons,
-    'translateToAminoAcids': translateToAminoAcids
+    'translateToAminoAcids': translateToAminoAcids,
+    'getSitesAsListOfStrings': getSitesAsListOfStrings
 }
