@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>bioutils 0.0.1 | Documentation</title>
+  <title>bioutils 0.1.0-alpha.0 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>bioutils</h3>
-          <div class='mb1'><code>0.0.1</code></div>
+          <div class='mb1'><code>0.1.0-alpha.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -208,7 +208,11 @@
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>inputData(<span class="hljs-string">'&gt;seq1\nact\n&gt;seq2\natc\n(seq1,seq2);'</span>, {<span class="hljs-string">'fileType'</span>: <span class="hljs-string">'fna'</span>, <span class="hljs-string">'otherMetaData'</span>: <span class="hljs-string">'this is an example'</span>})</pre>
+      <pre class='p1 overflow-auto round fill-light'>inputData(<span class="hljs-string">'&gt;seq1\nact\n&gt;seq2\natc\n(seq1,seq2);'</span>, {<span class="hljs-string">'fileType'</span>: <span class="hljs-string">'fna'</span>, <span class="hljs-string">'otherMetaData'</span>: <span class="hljs-string">'this is an example'</span>})
+<span class="hljs-comment">// returns {'sequences': [ {'seq1': 'act'}, {'seq2': 'atc'} ],</span>
+<span class="hljs-comment">//          'tree': '(seq1,seq2);',</span>
+<span class="hljs-comment">//          'metaData': {'fileType': 'fna', 'otherMetaData': 'this is an example'})</span>
+<span class="hljs-comment">//          }</span></pre>
     
   
 
@@ -402,7 +406,7 @@
 
  
   
-    <div class='pre p1 fill-light mt0'>writeFileSync(dataObject: any, filePath: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, fileType: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, the: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): any</div>
+    <div class='pre p1 fill-light mt0'>writeFileSync(dataObject: any, filePath: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, fileType: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, the: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): null</div>
    
   
   
@@ -463,8 +467,8 @@
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>any</code>:
-        empty; This function writes a file but does not return anything.
+      <code>null</code>:
+        This function writes a file but does not return anything.
 
       
     
@@ -554,12 +558,6 @@
   
 
   
-    <div class='py1 quiet mt1 prose-big'>Example</div>
-    
-      
-      <pre class='p1 overflow-auto round fill-light'>inputData(<span class="hljs-string">'&gt;seq1\nact\n&gt;seq2\natc);'</span>, {<span class="hljs-string">'fileType'</span>: <span class="hljs-string">'fna'</span>, <span class="hljs-string">'otherMetaData'</span>: <span class="hljs-string">'this is an example'</span>})</pre>
-    
-  
 
   
 
@@ -644,7 +642,11 @@
     <div class='py1 quiet mt1 prose-big'>Example</div>
     
       
-      <pre class='p1 overflow-auto round fill-light'>inputData(<span class="hljs-string">'&gt;seq1\nact\n&gt;seq2\natc\n(seq1,seq2););'</span>, {<span class="hljs-string">'fileType'</span>: <span class="hljs-string">'fna'</span>, <span class="hljs-string">'otherMetaData'</span>: <span class="hljs-string">'this is an example'</span>})</pre>
+      <pre class='p1 overflow-auto round fill-light'>inputData(<span class="hljs-string">'&gt;seq1\nact\n&gt;seq2\natc\n(seq1,seq2);'</span>)
+<span class="hljs-comment">// returns {'sequences': [ {'seq1': 'act'}, {'seq2': 'atc'} ],</span>
+<span class="hljs-comment">//          'tree': '(seq1,seq2);',</span>
+<span class="hljs-comment">//          'metaData': {'fileType': 'fna'})</span>
+<span class="hljs-comment">//          }</span></pre>
     
   
 
@@ -725,12 +727,6 @@
 
   
 
-  
-    <div class='py1 quiet mt1 prose-big'>Example</div>
-    
-      
-      <pre class='p1 overflow-auto round fill-light'>inputData(<span class="hljs-string">'&gt;seq1\nact\n&gt;seq2\natc\n(seq1,seq2););'</span>, {<span class="hljs-string">'fileType'</span>: <span class="hljs-string">'fna'</span>, <span class="hljs-string">'otherMetaData'</span>: <span class="hljs-string">'this is an example'</span>})</pre>
-    
   
 
   
@@ -961,6 +957,14 @@ corresponding sequence (sequences listed in the same, decending order of the MSA
 
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">const</span> simpleBioUtilsObject = bioUtils.inputData(<span class="hljs-string">'&gt;seq1\nACT\n&gt;seq2\nATC'</span>)
+getSitesAsListOfStrings(simpleBioUtilsObject)
+<span class="hljs-comment">// returns ['AA', 'CT', 'TC']</span></pre>
+    
   
 
   

@@ -3,7 +3,12 @@
  * @param {string} fnaString input fna string using '\n' for line breaks
  * @param {object} metaData any metadata to be appended to the bioUtils JSON object
  * @returns {object} the bioUtils JSON object {'sequences': [{'name': string, 'sequence': string}],'tree': string,'metaData': {'fileType': string, (metaData param)}}
- * @example inputData('>seq1\nact\n>seq2\natc\n(seq1,seq2););', {'fileType': 'fna', 'otherMetaData': 'this is an example'})
+ * @example 
+ * inputData('>seq1\nact\n>seq2\natc\n(seq1,seq2);')
+ * // returns {'sequences': [ {'seq1': 'act'}, {'seq2': 'atc'} ],
+ * //          'tree': '(seq1,seq2);',
+ * //          'metaData': {'fileType': 'fna'})
+ * //          }
  */ 
 function fnaParser(fnaString, metaData) {
     const fnaLines = fnaString.split("\n");

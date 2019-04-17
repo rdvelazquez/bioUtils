@@ -3,7 +3,6 @@
  * @param {string} fastaString input fasta string using '\n' for line breaks
  * @param {object} metaData any metadata to be appended to the bioUtils JSON object
  * @returns {object} the bioUtils JSON object {'sequences': [{'name': string, 'sequence': string}],'tree': undefined,'metaData': {'fileType': string, (metaData param)}}
- * @example inputData('>seq1\nact\n>seq2\natc);', {'fileType': 'fna', 'otherMetaData': 'this is an example'})
  */ 
 function fastaParser(fastaString, metaData) {
     const fastaLines = fastaString.split("\n");

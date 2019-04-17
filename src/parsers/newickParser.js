@@ -3,7 +3,6 @@
  * @param {string} newickString input newick string using '\n' for line breaks
  * @param {object} metaData any metadata to be appended to the bioUtils JSON object
  * @returns {object} the bioUtils JSON object {'sequences': []],'tree': string,'metaData': {'fileType': string, (metaData param)}}
- * @example inputData('>seq1\nact\n>seq2\natc\n(seq1,seq2););', {'fileType': 'fna', 'otherMetaData': 'this is an example'})
  */ 
 function newickParser(newickString, metaData) {
     const newickLines = newickString.split("\n");

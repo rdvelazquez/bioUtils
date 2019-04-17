@@ -4,6 +4,10 @@
  * corresponding sequence (sequences listed in the same, decending order of the MSA)
  * @param {object} dataObject the bioUtils JSON object
  * @returns {list} the list of strings
+ * @example
+ * const simpleBioUtilsObject = bioUtils.inputData('>seq1\nACT\n>seq2\nATC')
+ * getSitesAsListOfStrings(simpleBioUtilsObject)
+ * // returns ['AA', 'CT', 'TC']
  */ 
 function getSitesAsListOfStrings(dataObject) {
     // from bioUtils object to a list of lists

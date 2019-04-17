@@ -1,6 +1,6 @@
 {
   "name": "bioutils",
-  "version": "0.0.1",
+  "version": "0.1.0-alpha.0",
   "license": "MIT",
   "main": "src/bioUtils.js",
   "description": "Utilities for Working with Bioinformatics Files (fasta, fna, nexus and newick) in JavaScript",
