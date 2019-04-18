@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>bioutils 0.1.0-alpha.0 | Documentation</title>
+  <title>bioutils 0.1.0-alpha.1 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>bioutils</h3>
-          <div class='mb1'><code>0.1.0-alpha.0</code></div>
+          <div class='mb1'><code>0.1.0-alpha.1</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -99,6 +99,36 @@
                   href='#containsstopcodons'
                   class="">
                   containsStopCodons
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#numberofsites'
+                  class="">
+                  numberOfSites
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#numberofsequences'
+                  class="">
+                  numberOfSequences
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#sites'
+                  class="">
+                  sites
                   
                 </a>
                 
@@ -209,7 +239,7 @@
     
       
       <pre class='p1 overflow-auto round fill-light'>inputData(<span class="hljs-string">'&gt;seq1\nact\n&gt;seq2\natc\n(seq1,seq2);'</span>, {<span class="hljs-string">'fileType'</span>: <span class="hljs-string">'fna'</span>, <span class="hljs-string">'otherMetaData'</span>: <span class="hljs-string">'this is an example'</span>})
-<span class="hljs-comment">// returns {'sequences': [ {'seq1': 'act'}, {'seq2': 'atc'} ],</span>
+<span class="hljs-comment">// returns {'sequences': [ {name:'seq1', sequence:'act'}, {name:'seq2', sequence:'atc'} ],</span>
 <span class="hljs-comment">//          'tree': '(seq1,seq2);',</span>
 <span class="hljs-comment">//          'metaData': {'fileType': 'fna', 'otherMetaData': 'this is an example'})</span>
 <span class="hljs-comment">//          }</span></pre>
@@ -799,6 +829,214 @@
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></code>:
         whether or not the data contains stop codons
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='numberofsites'>
+      numberOfSites
+    </h3>
+    
+    
+  </div>
+  
+
+  
+ 
+  
+    <div class='pre p1 fill-light mt0'>numberOfSites(dataObject: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): int</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>dataObject</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    the bioUtils JSON object
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>int</code>:
+        The number of sites of sites of the fist sequence counting gaps
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='numberofsequences'>
+      numberOfSequences
+    </h3>
+    
+    
+  </div>
+  
+
+  
+ 
+  
+    <div class='pre p1 fill-light mt0'>numberOfSequences(dataObject: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): int</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>dataObject</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    the bioUtils JSON object
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>int</code>:
+        The number of sequences
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='sites'>
+      sites
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Attempt to quantify the diversity of an alignment using Shannon entropy</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>sites</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>msa</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    a bioUtils JSON object
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>list</code>:
+        a list of the diversity for each site
 
       
     

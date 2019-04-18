@@ -10,7 +10,7 @@ const newickParser = require("./../parsers/newickParser");
  * @returns {object} the bioUtils JSON object {'sequences': [{'name': string, 'sequence': string}],'tree': string,'metaData': {'fileType': string, (metaData param)}}
  * @example 
  * inputData('>seq1\nact\n>seq2\natc\n(seq1,seq2);', {'fileType': 'fna', 'otherMetaData': 'this is an example'})
- * // returns {'sequences': [ {'seq1': 'act'}, {'seq2': 'atc'} ],
+ * // returns {'sequences': [ {name:'seq1', sequence:'act'}, {name:'seq2', sequence:'atc'} ],
  * //          'tree': '(seq1,seq2);',
  * //          'metaData': {'fileType': 'fna', 'otherMetaData': 'this is an example'})
  * //          }

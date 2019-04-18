@@ -1,0 +1,1 @@
+The `manipulation` directory contains functions that convert bioUtils objects into other forms. Following a functional style, no in-place manipulation is done; rather, these functions return new objects.

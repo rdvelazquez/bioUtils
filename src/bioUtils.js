@@ -9,12 +9,15 @@ const fastaParser = require('./parsers/fastaParser');
 const fnaParser = require('./parsers/fnaParser');
 const newickParser = require('./parsers/newickParser');
 
-// getInfo
-const containsStopCodons = require('./getInfo/containsStopCodons')
+// stats
+const containsStopCodons = require('./stats/containsStopCodons')
+const numberOfSites = require('./stats/numberOfSites')
+const numberOfSequences = require('./stats/numberOfSequences')
+const shannonEntropiesOfSites = require('./stats/misc/shannonEntropiesOfSites')
 
 // manipulation
 const translateToAminoAcids = require('./manipulation/translateToAminoAcids')
-const getSitesAsListOfStrings = require('./manipulation/getSitesAsListOfStrings')
+const getSitesAsListOfStrings = require('./manipulation/misc/getSitesAsListOfStrings')
 
 module.exports = {
     'inputData': inputData,
@@ -25,6 +28,9 @@ module.exports = {
     'fnaParser': fnaParser,
     'newickParser': newickParser,
     'containsStopCodons': containsStopCodons,
+    'numberOfSites': numberOfSites,
+    'numberOfSequences': numberOfSequences,
+    'shannonEntropiesOfSites': shannonEntropiesOfSites,
     'translateToAminoAcids': translateToAminoAcids,
     'getSitesAsListOfStrings': getSitesAsListOfStrings
 }

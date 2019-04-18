@@ -1,0 +1,1 @@
+The `stats` directory contains functions that provide statistics and information about a bioUtils object.
