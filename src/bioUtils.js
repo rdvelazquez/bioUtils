@@ -8,6 +8,7 @@ const writeFileSync = require('./io/writeFileSync');
 const fastaParser = require('./parsers/fastaParser');
 const fnaParser = require('./parsers/fnaParser');
 const newickParser = require('./parsers/newickParser');
+const nexusParser = require('./parsers/nexusParser');
 
 // stats
 const containsStopCodons = require('./stats/containsStopCodons')
@@ -27,6 +28,7 @@ module.exports = {
     'fastaParser': fastaParser,
     'fnaParser': fnaParser,
     'newickParser': newickParser,
+    'nexusParser': nexusParser,
     'containsStopCodons': containsStopCodons,
     'numberOfSites': numberOfSites,
     'numberOfSequences': numberOfSequences,

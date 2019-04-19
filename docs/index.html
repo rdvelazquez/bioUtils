@@ -96,6 +96,16 @@
               
                 
                 <li><a
+                  href='#nexusparser'
+                  class="">
+                  nexusParser
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#containsstopcodons'
                   class="">
                   containsStopCodons
@@ -750,6 +760,87 @@
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
         the bioUtils JSON object {'sequences': []],'tree': string,'metaData': {'fileType': string, (metaData param)}}
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='nexusparser'>
+      nexusParser
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Converts a newick string into a bioUtils object
+TODO: This is currently only handling a small subset of nexus formats and data.
+TODO: This was written with simplicity and readability in mind; it can and should be speed up a bit though.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>nexusParser(nexusString: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, metaData: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>nexusString</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    input newick string using '\n' for line breaks
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>metaData</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    any metadata to be appended to the bioUtils JSON object
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        the bioUtils JSON object {'sequences': [],'tree': string,'metaData': {'fileType': string, (metaData param)}}
 
       
     
