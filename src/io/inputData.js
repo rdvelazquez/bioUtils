@@ -1,6 +1,7 @@
 const fastaParser = require("./../parsers/fastaParser");
 const fnaParser = require("./../parsers/fnaParser");
 const newickParser = require("./../parsers/newickParser");
+const nexusParser = require("./../parsers/nexusParser");
 
 
 /**
@@ -49,7 +50,7 @@ function inputData(dataString, metaData) {
         }
 
     // Nexus?    
-    } else if (dataLines[0].toUpperCase == '#NEXUS') {
+    } else if (dataLines[0].toUpperCase() == '#NEXUS') {
         return nexusParser(dataString, metaData)
 
     // Newick?
